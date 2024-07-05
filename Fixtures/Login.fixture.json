@@ -1,0 +1,48 @@
+{
+  "validUser": {
+    "username": "sonic@gmail.com",
+    "password": "Password123"
+  },
+  "invalidUser": {
+    "invalidCredentials": {
+      "username": "invalidUsername",
+      "password": "Password123"
+    },
+    "emptyField": {
+      "username": "",
+      "password": ""
+    },
+    "emptyUsername": {
+      "username": "",
+      "password": "Password123"
+    },
+
+    "emptyPassword": {
+      "username": "student",
+      "password": " "
+    },
+    "usernameLeadingSpace": {
+      "username": "   student",
+      "password": "Password123"
+    },
+    "passwordLeadingSpace": {
+      "username": "student",
+      "password": "  Password123"
+    }
+  },
+
+  "fillForm": {
+    "firstName": "Sonic",
+    "lastName": "Maharjan",
+    "dob": "2058/10/09",
+    "email": "sonic@gmail.com",
+    "phone": "9812345678",
+    "street1": "tahachal",
+    "street2": "kichando marga",
+    "city": "kathmandu",
+    "state": "bagmati",
+    "postalcode": "4404",
+    "country": "Nepal",
+    "editName": "Rojen"
+  }
+}
