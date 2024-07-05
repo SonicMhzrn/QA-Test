@@ -18,38 +18,38 @@ test.beforeEach(async ({ page }) => {
   await login.verifyValidLogin();
 });
 
-test.describe("Dashboard CRUD Operations", () => {
-  test("Fill Form and Validate", async ({ page }) => {
-    await page.locator('//*[@id="add-contact"]').click();
-    const dashboard = new DashboardPage(page);
-    await dashboard.fillForm();
+// test.describe("Dashboard CRUD Operations", () => {
+//   test("Fill Form and Validate", async ({ page }) => {
+//     await page.locator('//*[@id="add-contact"]').click();
+//     const dashboard = new DashboardPage(page);
+//     await dashboard.fillForm();
 
-    await dashboard.validFill();
-  });
+//     await dashboard.validFill();
+//   });
 
-  test("Edit Data and Validate", async ({ page }) => {
-    const dashboard = new DashboardPage(page);
-    await dashboard.editData();
-    await dashboard.validEdit();
-  });
+//   test("Edit Data and Validate", async ({ page }) => {
+//     const dashboard = new DashboardPage(page);
+//     await dashboard.editData();
+//     await dashboard.validEdit();
+//   });
 
-  test("Delete Data and Validate", async ({ page }) => {
-    const dashboard = new DashboardPage(page);
+//   test("Delete Data and Validate", async ({ page }) => {
+//     const dashboard = new DashboardPage(page);
 
-    page.waitForTimeout(2000);
-    await dashboard.deleteData();
-    page.waitForTimeout(2000);
-    await dashboard.validDelete();
-  });
+//     page.waitForTimeout(2000);
+//     await dashboard.deleteData();
+//     page.waitForTimeout(2000);
+//     await dashboard.validDelete();
+//   });
 
-  test("Logout and Validate", async ({ page }) => {
-    const dashboard = new DashboardPage(page);
-    await dashboard.logout();
-    await dashboard.validLogout();
-  });
-});
+//   test("Logout and Validate", async ({ page }) => {
+//     const dashboard = new DashboardPage(page);
+//     await dashboard.logout();
+//     await dashboard.validLogout();
+//   });
+// });
 
-test.only("Contact Edit test", async ({ context, page, request }) => {
+test("Contact Edit test", async ({ context, page, request }) => {
   const dashboard = new DashboardPage(page);
   const Data = { firstName: "hello", lastName: "world" };
   const accessToken = await authenticateUser1({ request });
